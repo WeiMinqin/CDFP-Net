@@ -16,6 +16,8 @@ Note: CT and PET should be pre-trained separately.
 ## 🚀 Quick Start: HECKTOR Dataset Case Study
 To help you easily reproduce our results and apply CDFP-Net to your own research, we provide a complete pipeline tutorial using the HECKTOR dataset as an example.
 
+Due to GitHub's file size limitations, we provide the pre-trained and fine-tuned weights via Baidu Netdisk. Please download them at [Baidu Netdisk](https://pan.baidu.com/s/1h3WInJdbxLKs0lfGMMqYJw?pwd=i6n3)(Code: i6n3) and place them in the correct directories as shown below.
+
 ### 1. Data Preprocessing
 To standardize the raw NIfTI files of the HECKTOR dataset, we adopted the preprocessing pipeline proposed by Cai et al. Please refer to their repository for the initial setup:
 
