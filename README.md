@@ -6,7 +6,7 @@ Accurate automated tumor segmentation in PET-CT imaging is critical for clinical
 ## Requirement
 ```pip install -r requirement.txt```
 ## Preprocessing
-The data preprocessing workflow of this project (including multi-angle MIP generation and intensity normalization) is referenced from [MIP-DDPM](https://github.com/Amirhosein2c/MIP-DDPM/tree/main/Data_Preparation).
+Projecting 3D data using [MIP-DDPM](https://github.com/Amirhosein2c/MIP-DDPM/tree/main/Data_Preparation).
 ## Pre-training
 ```python SS_diff.py```
 
