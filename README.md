@@ -13,41 +13,6 @@ The data preprocessing workflow of this project (including multi-angle MIP gener
 Note: CT and PET should be pre-trained separately.
 ## Downstream Fine-Tuning
 ```python Diff_Seg_early.py```
-## 🚀 Quick Start: HECKTOR Dataset Case Study
-To help you easily reproduce our results and apply CDFP-Net to your own research, we provide a complete pipeline tutorial using the HECKTOR dataset as an example.
-
-Due to GitHub's file size limitations, we provide the pre-trained and fine-tuned weights via Baidu Netdisk. Please download them at [one drive](https://1drv.ms/f/c/e8c70e386462e242/IgA2NLGRVS_0Q4UQybrCtj3mAXiQTg1LetKhMgp7qKs0y-U?e=oWJZYh) and place them in the correct directories as shown below.
-
-### 1. Data Preprocessing
-To standardize the raw NIfTI files of the HECKTOR dataset, we adopted the preprocessing pipeline proposed by Cai et al. Please refer to their repository for the initial setup:
-
-Preprocessing Repository: [HECKTOR2025-MEDAI](https://github.com/Liiiii2101/HECKTOR2025-MEDAI)
-
-After completing the NIfTI preprocessing, perform the Multi-Angle Maximum Intensity Projection (MA-MIP). Then, use the scripts provided in the data/ directory to split the dataset for subsequent training and testing.
-
-### 2. Pre-trained Weights for Downstream Training
-To accelerate convergence and achieve optimal performance on your downstream segmentation tasks, we provide our self-supervised pre-trained weights for both CT and PET modalities.
-
-You can find the pre-trained weights in the following directories:
-
-CT Pre-trained Model: CDFP/pretrain/CT/CT.pth
-
-PET Pre-trained Model: CDFP/pretrain/PET/PET.pth
-
-To train the downstream model using these weights, run:
-```
-python train.py --dataset HECKTOR --resume_ct CDFP/pretrain/CT/CT.pth --resume_pet CDFP/pretrain/PET/PET.pth --batch_size 4
-```
-### 3. Direct Testing with Downstream Weights
-If you wish to skip the training phase and directly evaluate the performance of CDFP-Net on the HECKTOR test set, we also provide the fully fine-tuned downstream weights.
-
-Downstream Checkpoint: CDFP/downstream/checkpoint.pth
-
-To run inference and calculate metrics (e.g., Dice, Hausdorff Distance), execute:
-
-```
-python test.py --dataset HECKTOR --weights CDFP/downstream/checkpoint.pth --save_predictions True
-```
 ## Acknowledgment
 Code copied a lot from [GenSelfDiff-HIS](https://github.com/suhas-srinath/GenSelfDiff-HIS/tree/main)、[MIP-DDPM](https://github.com/Amirhosein2c/MIP-DDPM/tree/main/Data_Preparation)、[AAHN](https://github.com/joker-527/AAHN)、[HECKTOR2025-MEDAI](https://github.com/Liiiii2101/HECKTOR2025-MEDAI).
 
