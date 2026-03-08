@@ -35,7 +35,9 @@ CT Pre-trained Model: CDFP/pretrain/CT/CT.pth
 PET Pre-trained Model: CDFP/pretrain/PET/PET.pth
 
 To train the downstream model using these weights, run:
-```python train.py --dataset HECKTOR --resume_ct CDFP/pretrain/CT/CT.pth --resume_pet CDFP/pretrain/PET/PET.pth --batch_size 4```
+```
+python train.py --dataset HECKTOR --resume_ct CDFP/pretrain/CT/CT.pth --resume_pet CDFP/pretrain/PET/PET.pth --batch_size 4
+```
 ### 3. Direct Testing with Downstream Weights
 If you wish to skip the training phase and directly evaluate the performance of CDFP-Net on the HECKTOR test set, we also provide the fully fine-tuned downstream weights.
 
@@ -43,7 +45,9 @@ Downstream Checkpoint: CDFP/downstream/checkpoint.pth
 
 To run inference and calculate metrics (e.g., Dice, Hausdorff Distance), execute:
 
-```python test.py --dataset HECKTOR --weights CDFP/downstream/checkpoint.pth --save_predictions True```
+```
+python test.py --dataset HECKTOR --weights CDFP/downstream/checkpoint.pth --save_predictions True
+```
 ## Acknowledgment
 Code copied a lot from [GenSelfDiff-HIS](https://github.com/suhas-srinath/GenSelfDiff-HIS/tree/main)、[MIP-DDPM](https://github.com/Amirhosein2c/MIP-DDPM/tree/main/Data_Preparation)、[AAHN](https://github.com/joker-527/AAHN)、[HECKTOR2025-MEDAI](https://github.com/Liiiii2101/HECKTOR2025-MEDAI).
 
