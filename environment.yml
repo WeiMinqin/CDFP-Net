@@ -1,0 +1,38 @@
+name: CDFP
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy>=2.1.2
+  - pandas>=2.3.3
+  - scikit-learn>=1.7.2
+  - scipy>=1.15.3
+  - matplotlib>=3.10.6
+  - pillow>=11.3.0
+  - tqdm
+  - pip:
+      - torch==2.7.1 --index-url https://download.pytorch.org/whl/cu118
+      - torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cu118
+      - torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu118
+      - monai==1.5.1
+      - nibabel==5.3.2
+      - simpleitk==2.5.2
+      - pydicom==3.0.1
+      - dicom2nifti==2.6.2
+      - medpy==0.5.2
+      - diffusers
+      - transformers==4.40.2
+      - einops==0.8.1
+      - nnunetv2==2.6.2
+      - dynamic-network-architectures==0.4.2
+      - batchgenerators==0.25.1
+      - tensorboard==2.20.0
+      - tensorboardx==2.6.4
+      - pyyaml==6.0.3
+      - h5py==3.15.1
+      - imageio==2.37.0
+      - opencv-python==4.12.0.88
