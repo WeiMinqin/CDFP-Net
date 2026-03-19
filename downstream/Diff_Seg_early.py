@@ -135,12 +135,6 @@ def my_transforms(image1, image2, mask):
         image1 = TF.gaussian_blur(image1, blur_kernels, blur_sigma)
         image2 = TF.gaussian_blur(image2, blur_kernels, blur_sigma)
 
-    if random.random() > 0.7:
-        # Apply identical color jitter
-        jitter = transforms.ColorJitter(brightness=0.4, contrast=0.3)
-        image1 = jitter(image1)
-        image2 = jitter(image2)
-
     return image1, image2, mask
 
 
